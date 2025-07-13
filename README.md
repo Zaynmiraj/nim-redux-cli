@@ -1,4 +1,4 @@
-# nim-redux-init
+# nim-redux-cli
 
 ⚡ A powerful CLI tool to quickly set up Redux with either RTK Query or traditional reducers for React, Next.js, React Native, and Expo projects.
 
@@ -22,13 +22,13 @@ This CLI automatically:
 Install globally via npm:
 
 ```bash
-npm install -g nim-redux-init
+npm install -g nim-redux-cli
 ```
 
 Or use it directly without installing globally:
 
 ```bash
-npx nim-redux-init
+npx nim-redux-cli
 ```
 
 ---
@@ -56,7 +56,7 @@ cd my-app
 Run the tool:
 
 ```bash
-npx nim-redux-init
+npx nim-redux-cli
 ```
 
 You’ll be prompted to choose a Redux setup type:
@@ -117,7 +117,7 @@ Additionally, the tool will wrap your app with the Redux `<Provider>` in the cor
 ## 🧪 Example Output
 
 ```bash
-npx nim-redux-init
+npx nim-redux-cli
 ```
 
 ```
