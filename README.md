@@ -1,82 +1,158 @@
 # nim-redux-init
 
-**A CLI tool to quickly scaffold Redux/RTK Query setup in React, Next.js, React Native, and Expo projects.**
+⚡ A powerful CLI tool to quickly set up Redux with either RTK Query or traditional reducers for React, Next.js, React Native, and Expo projects.
 
 ---
 
-## Features
+## 🔧 What does it do?
 
-- Generate Redux store and auth slice with RTK Query or normal reducer setup
-- Auto-detect project type: React, Next.js, React Native, or Expo
-- Inject Redux Provider in your app entry point automatically
-- Creates folder structure and boilerplate files
-- Installs required dependencies automatically
+This CLI automatically:
+
+- Detects your project type (React, Next.js, React Native, or Expo)
+- Asks you to choose between RTK Query or a Normal Reducer setup
+- Creates all necessary Redux folder structure and files
+- Injects the Redux `<Provider>` into the correct app entry point
+- Installs all required dependencies
+- Includes optional auth mutation setup for RTK Query
 
 ---
 
-## Installation
+## 📦 Installation
 
-You can install the CLI globally via npm:
+Install globally via npm:
 
-
+```bash
 npm install -g nim-redux-init
-Or use npx to run it without installing globally:
+```
 
+Or use it directly without installing globally:
 
-
+```bash
 npx nim-redux-init
-Usage
-Run the CLI command anywhere inside your React/Next.js/React Native/Expo project root:
+```
 
+---
 
+## 🚀 Getting Started
 
-nim-redux-init
-You'll be prompted to select your Redux setup type:
+First, create your project using your preferred framework:
 
-RTK Query: Includes Redux Toolkit Query setup with API slice and auth endpoints
+```bash
+npx create-react-app my-app
+# or
+npx create-next-app my-app
+# or
+npx create-expo-app my-app
+# or
+npx @react-native-community init my-app
+```
 
-Normal Reducer: Classic Redux Toolkit slice and store setup without RTK Query
+Then, navigate to your project folder:
 
-The CLI will:
+```bash
+cd my-app
+```
 
-Create necessary folders and files (src/redux, src/redux/slices, src/redux/service, etc.)
+Run the tool:
 
-Add a Redux Provider wrapper around your app's root component (App.js, app/layout.js, _layout.js, etc.)
+```bash
+npx nim-redux-init
+```
 
-Install Redux Toolkit, React-Redux, Axios, and other dependencies automatically
+You’ll be prompted to choose a Redux setup type:
 
-Supported Project Types
-React (Create React App or similar)
+- RTK Query
+- Normal Reducer
 
-Next.js
+Based on your selection, it will generate the required structure and logic.
 
-React Native
+---
 
-Expo
+## 🧱 File Structure Generated
 
-Example
+Depending on your choice, this tool will create files like:
 
-nim-redux-init
-Output:
+For RTK Query:
 
-swift
+```
+src/
+  redux/
+    store.js
+    service/
+      backendApi.js
+      authSlice.js
+  utils/
+    constant.js
+  lib/
+    axios.js
+```
 
+For Normal Reducer:
+
+```
+src/
+  redux/
+    store.js
+    slices/
+      authSlice.js
+```
+
+Additionally, the tool will wrap your app with the Redux `<Provider>` in the correct entry file:
+
+- React: `src/main.jsx` or `src/main.js` or `src/main.tsx`
+- Next.js: `app/layout.jsx` or `pages/_app.js` or `pages/_app.tsx`
+- React Native: `App.js` or `App.tsx` or `App.jsx`
+- Expo: `app/_layout.js` or `app/_layout.jsx` or `app/_layout.tsx`
+
+---
+
+## 📦 Dependencies Installed Automatically
+
+- `@reduxjs/toolkit`
+- `react-redux`
+- `axios` (for RTK Query setup)
+
+---
+
+## 🧪 Example Output
+
+```bash
+npx nim-redux-init
+```
+
+```
 ? Choose Redux setup: (Use arrow keys)
 ❯ RTK Query
   Normal Reducer
 
-📁 Created directory: /path/to/project/src/redux
-📄 Created file: /path/to/project/src/redux/store.js
-📄 Created file: /path/to/project/src/redux/service/backendApi.js
-...
-🧵 <Provider> wrapped in /path/to/project/App.js
-✅ RTK Query setup complete for react project.
-Development
-To link your local copy globally for testing:
-npm link
+📁 Created directory: /your-project/src/redux
+📄 Created file: /your-project/src/redux/store.js
+📄 Created file: /your-project/src/redux/service/backendApi.js
+📄 Created file: /your-project/src/redux/service/authSlice.js
+📄 Created file: /your-project/src/utils/constant.js
+📄 Created file: /your-project/src/lib/axios.js
+🧵 <Provider> wrapped in /your-project/App.js
+✅ RTK Query setup complete for react-native project.
+👨‍💻 Thanks for using this tool and to the creators of the tool. Have a great day!
+🌐 Visit my website: https://www.zaynmiraj.com
+```
 
-Then run:
+---
 
-nim-redux-init
-License
+## 💡 Tips
+
+- You can rerun this command if you want to switch between RTK and Reducer setup (but be cautious of overwriting existing files).
+- Works best in a clean/new project scaffolded with Create React App, Next.js, React Native, or Expo.
+
+---
+
+## 🙏 Credits
+
+Built by **ZaYn Miraj**  
+CLI Creator: [@zaynmiraj](https://www.zaynmiraj.com)
+
+---
+
+## 🪪 License
+
 MIT License
