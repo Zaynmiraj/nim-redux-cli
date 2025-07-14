@@ -1,6 +1,6 @@
 {
   "name": "nim-redux-cli",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "main": "index.js",
   "author": "ZaYn Miraj",
 
@@ -19,6 +19,9 @@
     "inquirer": "^8.2.6",
     "ora": "^8.2.0"
   },
+  "publishConfig": {
+  "access": "public"
+},
   "repository": {
   "type": "git",
   "url": "git+https://github.com/zaynmiraj/nim-redux-cli.git"
