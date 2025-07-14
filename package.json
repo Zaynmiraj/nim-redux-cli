@@ -14,7 +14,7 @@
   "license": "ISC",
   "description": " nim-redux-cli is a simple tool to set up a Redux project with RTK Query and React Router. It provides a quick and easy way to get started with a Redux setup for your project. It also includes a simple setup for a basic React Native project.",
   "bin": {
-    "nim-redux-cli": "./bin/index.js"
+    "nim-redux-cli": "bin/index.js"
   },
   "dependencies": {
     "chalk": "^5.4.1",
