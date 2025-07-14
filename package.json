@@ -1,21 +1,30 @@
 {
-  "name": "miraj-config-redux",
-  "version": "1.0.0",
+  "name": "nim-redux-cli",
+  "version": "1.0.1",
   "main": "index.js",
+  "author": "ZaYn Miraj",
+
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["ZaYn Miraj", "redux-cli", "nim-redux-cli"],
   "license": "ISC",
-  "description": "",
+  "description": " nim-redux-cli is a simple tool to set up a Redux project with RTK Query and React Router. It provides a quick and easy way to get started with a Redux setup for your project. It also includes a simple setup for a basic React Native project.",
   "bin": {
-    "nim-redux-init": "./bin/index.js"
+    "nim-redux-cli": "./bin/index.js"
   },
   "dependencies": {
     "chalk": "^5.4.1",
     "fs-extra": "^11.3.0",
     "inquirer": "^8.2.6",
     "ora": "^8.2.0"
-  }
+  },
+  "repository": {
+  "type": "git",
+  "url": "git+https://github.com/zaynmiraj/nim-redux-cli.git"
+},
+"bugs": {
+  "url": "https://github.com/zaynmiraj/nim-redux-cli/issues"
+},
+"homepage": "https://github.com/zaynmiraj/nim-redux-cli#readme"
 }
