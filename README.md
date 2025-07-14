@@ -28,6 +28,7 @@ npm install -g nim-redux-cli
 Or use it directly without installing globally:
 
 ```bash
+npm install nim-redux-cli
 npx nim-redux-cli
 ```
 
