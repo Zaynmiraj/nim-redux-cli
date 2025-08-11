@@ -120,7 +120,7 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 import { BASE_URL } from "../../utils/constant";
 
 const backendApi = createApi({
-  tagTypes: ["FetchMyChatList", "GetPatient"],
+  tagTypes: [],
   baseQuery: fetchBaseQuery({
     baseUrl: BASE_URL || "http://localhost:3000/api/v1",
     credentials: "include",
